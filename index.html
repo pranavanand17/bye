@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Burn Your Existence</title>
+
+<style>
+.text {
+	color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: Courier New;
+}
+</style>
+</head>
+
+<body style="background-color: black;">
+<br>
+<center><button onclick="typeWriter()" id="girls">bye</button><center>
+<p class="text" id="demo"></p>
+
+<script>
+var i=0;
+var txt="Burn Your Existence";
+var speed=50;
+
+function typeWriter(){
+	if (i<txt.length){ 
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    	const element=document.getElementById("girls");
+        i++;
+        setTimeout(typeWriter, speed);
+        element.remove();
+    }
+}
+</script>
+</body>
+</html>
